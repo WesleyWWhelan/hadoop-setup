@@ -50,6 +50,8 @@ In this repo, there are four files in the "changes" folder. Replace the files in
 
 `
 $ ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa
+
 $ cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+
 $ chmod 0600 ~/.ssh/authorized_keys
 `
