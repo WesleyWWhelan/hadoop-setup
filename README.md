@@ -1,11 +1,15 @@
-# HADOOP Installation and Setup
+# HADOOP Single Node Setup (Mac)
+
+## Installation and Setup
 
 ### First - Install Hombrew:
 https://brew.sh/
 
-## Open Terminal Window:
+
 
 ### Second - Install Java:
+
+Open Terminal Window
 
 `$ brew install java`
 
@@ -46,12 +50,43 @@ to access the file from terminal, and then:
 
 In this repo, there are four files in the "changes" folder. Replace the files in hadoop on your computer, with these four files. Optionally, you could just copy the code out and replace the code instead of downloading the files.
 
-### Remove need for password:
+### Fifth - Remove need for password:
 
-`
-$ ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa
+`$ ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa`
 
-$ cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+`$ cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys`
 
-$ chmod 0600 ~/.ssh/authorized_keys
-`
+`$ chmod 0600 ~/.ssh/authorized_keys`
+
+Check that it worked: 
+
+`$ ssh localhost`
+
+### Sixth - Format NameNode:
+
+`$ cd /usr/local/cellar/hadoop/3.3.0/libexec/bin`
+
+`$ hdfs namenode -format`
+
+If prompted to re-format file system, press Y and accept.
+
+## Run Session
+
+1. Access sbin: `$ cd /usr/local/cellar/hadoop/3.3.0/libexec/sbin`
+
+2. Run: `$ ./start-all.sh`
+
+3. Check that running: `$ jps`
+
+This should give something like:
+
+```
+99909 ResourceManager
+7736 NameNode
+86984 QuorumPeerMain
+7977 SecondaryNameNode
+122 NodeManager
+8303 Jps
+```
+
+
