@@ -48,10 +48,15 @@ In "core-site.xml", we will replace the configuration with:
 
 `
 <configuration>
+
   <property>
+  
     <name>fs.defaultFS</name>
+    
     <value>hdfs://localhost:9000</value>
+    
   </property>
+  
 </configuration>
 `
 
