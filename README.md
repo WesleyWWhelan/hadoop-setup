@@ -78,8 +78,7 @@ If prompted to re-format file system, press Y and accept.
 
 3. Check that running: `$ jps`
 
-This should give something like:
-
+This should give something similar to:
 ```
 99909 ResourceManager
 7736 NameNode
@@ -89,4 +88,10 @@ This should give something like:
 8303 Jps
 ```
 
+You can also access your current session's configurations at: http://localhost:9870
+
+
+### To end the session:
+
+`$ ./stop-all.sh`
 
