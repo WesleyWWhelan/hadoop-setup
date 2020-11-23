@@ -1,18 +1,20 @@
 # HADOOP Installation and Setup
 
-## First - Install Hombrew:
+### First - Install Hombrew:
 https://brew.sh/
 
-## Second - Install Java:
+## In Terminal:
+
+### Second - Install Java:
 
 $ `brew install java`
 
-### Check version: 
+#### Check version: 
 
 $ `java -version` 
 ( Should be 1.8)
 
-### Install JDK
+#### Install JDK
 
 $ `brew install adoptopenjdk8`
 
