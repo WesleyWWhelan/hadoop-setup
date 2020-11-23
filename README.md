@@ -42,21 +42,14 @@ to access the file from terminal, and then:
 
 `$ open hadoop`
 
-### Now that it is open, we can access the specific files we need to edit.
+#### Now that it is open, we can access the specific files we need to edit.
 
-In "core-site.xml", we will replace the configuration with:
+In this repo, there are four files in the "changes" folder. Replace the files in hadoop on your computer, with these four files. Optionally, you could just copy the code out and replace the code instead of downloading the files.
+
+### Remove need for password:
 
 `
-<configuration>
-
-  <property>
-  
-    <name>fs.defaultFS</name>
-    
-    <value>hdfs://localhost:9000</value>
-    
-  </property>
-  
-</configuration>
+$ ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa
+$ cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+$ chmod 0600 ~/.ssh/authorized_keys
 `
-
