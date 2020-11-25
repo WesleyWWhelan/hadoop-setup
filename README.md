@@ -1,4 +1,4 @@
-# HADOOP Single Node Setup (Mac)
+# HADOOP Single Node Cluster Setup (Mac)
 
 ## Installation and Setup
 
